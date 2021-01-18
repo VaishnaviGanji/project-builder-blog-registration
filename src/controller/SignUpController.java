@@ -3,7 +3,8 @@ package controller;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-
+import businesslogic.RegistrationValidation;
+import model.User;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,10 +32,11 @@ public class SignUpController extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	/*	String email = request.getParameter("email"); 
+		String email = request.getParameter("email"); 
 		String password = request.getParameter("password"); 
 		String confirmPassword = request.getParameter("confirmPassword"); 
 		LocalDateTime date= LocalDateTime.now(); 
+		RegistrationValidation checkUser = new RegistrationValidation();
 		
 
 		
@@ -58,7 +60,7 @@ public class SignUpController extends HttpServlet {
 			rd.forward(request, response);
 		}
 		
-		*/
+		
 	}
 
 }
